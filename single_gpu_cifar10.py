@@ -16,7 +16,7 @@ class Trainer:
         train_data: DataLoader,
         optimizer: torch.optim.Optimizer,
         gpu_id: int,
-        save_every: int, 
+        save_every: int,
     ) -> None:
         self.gpu_id = gpu_id
         self.model = model.to(gpu_id)
