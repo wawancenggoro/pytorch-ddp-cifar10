@@ -20,6 +20,12 @@ python single_gpu_cifar10.py <TOTAL_EPOCHS> <SAVE_EVERY> --batch_size <BATCH_SIZ
 
 `<TOTAL_EPOCHS>` is the number of epochs to train the model. The model will be saved for every `<SAVE_EVERY>` epoch. `<BATCH_SIZE>` is the size of each batch (default=32).
 
+Example for 1 epoch, save every 1 epoch, and batch size is 1916 (the largest batch size with NVIDIA H100 SXM).
+
+```bash
+python single_gpu_cifar10.py 1 1 --batch_size 1916
+```
+
 
 ## Multi-GPU acceleration with Pytorch
 
@@ -30,3 +36,9 @@ python multigpu_cifar10.py <TOTAL_EPOCHS> <SAVE_EVERY> --batch_size <BATCH_SIZE>
 ```
 
 The first three parameters are the same as in the single GPU code. `<GPU_NUM>` is the number of GPU you want to use (default 2).
+
+Example with 4 GPUs:
+
+```bash
+python multigpu_cifar10.py 1 1 --batch_size 1916 --gpu_num 4
+```
