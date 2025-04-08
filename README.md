@@ -42,3 +42,9 @@ Example with 4 GPUs:
 ```bash
 python multigpu_cifar10.py 1 1 --batch_size 1916 --gpu_num 4
 ```
+
+## Result
+
+Below is the visualization of the epoch/s with 1 GPU to 4 GPUs. As expected, the epoch/s is getting larger with more GPUs.
+
+![alt text](performance_gain.jpg "Epoch/s with 1 GPU to 4 GPUs")
